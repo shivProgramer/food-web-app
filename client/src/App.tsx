@@ -9,6 +9,8 @@ import MainLayout from "./layout/MainLayout";
 import HeroSection from "./components/user_def_cmp/HeroSection";
 import Profile from "./components/user_def_cmp/Profile";
 import SearchPage from "./components/user_def_cmp/SearchPage";
+import RestaurantDetails from "./components/user_def_cmp/RestaurantDetails";
+import Cart from "./components/user_def_cmp/cart";
 
 const appRouter = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/search/:text",
         element: <SearchPage />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <RestaurantDetails />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

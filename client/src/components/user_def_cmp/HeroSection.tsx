@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col md:flex-row max-w-7xl mx-auto rounded-lg items-center justify-center gap-20">
       <div className="flex flex-col gap-10 md:w-[40%]">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 my-5 md:my-0">
           <h1 className="font-bold md:font-extrabold md:text-4xl  text-4xl text-shadow">
             Order Food Anytime && Anywhere
           </h1>

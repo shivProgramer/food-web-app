@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import FilterPage from "./FilterPage";
 import { Input } from "../ui/input";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Globe, MapPin, X } from "lucide-react";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent, CardFooter } from "../ui/card";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import cardimg from "@/assets/hero_pizza.png";
 const SearchPage = () => {
@@ -62,8 +62,9 @@ const SearchPage = () => {
             </div>
 
             {/* restoruent cards  */}
-            <div className="gird  md:grid-cols-3 gap-4">
-              <Card className="bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div className="grid  md:grid-cols-3 gap-4">
+            {[1,2,3].map((item:number , idx:number)=> (
+                <Card key={idx} className="bg-white dark:bg-gray-800 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 <div className="relative">
                   <AspectRatio ratio={16 / 6} className="bg-muted">
                     <img
@@ -93,13 +94,24 @@ const SearchPage = () => {
                       </p>
                     </div>
                     <div className="flex gap-2 mt-4 flex-wrap">
-                      <Badge className="font-medium px-2 py-1 rounded-full shadow-sm">
-                        cusine :
-                      </Badge>
+                      {["biryani" , "cusine" , "jalebi"].map((cusine:string , index:number) => (
+                        <Badge key={index} className="font-medium px-2 py-1 rounded-full shadow-sm">
+                         {cusine}
+                        </Badge>
+                      ))}
+                      
                     </div>
                   </CardContent>
                 </div>
+                <CardFooter className=" p-4 border-t dark:border-gray-700 border-gray-100 text-white flex justify-end ">
+                  <Link to={`/restaurant/${1}`}>
+                  <Button className="bg-orange hover:bg-hoverOrange font-semibold   rounded-full shadow-sm transition-colors duration-200"> View Menus</Button> 
+                  </Link>
+                </CardFooter>
               </Card>
+            ))}
+
+              
             </div>
           </div>
         </div>

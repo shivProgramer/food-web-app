@@ -206,7 +206,7 @@ const Navbar = () => {
                     <span> Order </span>
                   </Link>
                   <Link
-                    to={"/profile"}
+                    to={"/cart"}
                     className="flex mt-2 items-center gap-4 bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
                   >
                     <ShoppingCart />
