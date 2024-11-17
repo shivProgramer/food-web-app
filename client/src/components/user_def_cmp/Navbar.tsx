@@ -43,7 +43,6 @@ import {
 
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 const Navbar = () => {
   const admin = true;
   const loading = false;
@@ -74,7 +73,7 @@ const Navbar = () => {
                     Dashboard
                   </MenubarTrigger>
                   <MenubarContent className="mr-5">
-                    <Link to={"/admin/restorent"}>
+                    <Link to={"/admin/restaurant"}>
                       <MenubarItem>
                         Restorent{" "}
                         <MenubarShortcut>
@@ -91,7 +90,7 @@ const Navbar = () => {
                         </MenubarShortcut>
                       </MenubarItem>
                     </Link>
-                    <Link to={"/admin/order"}>
+                    <Link to={"/admin/orders"}>
                       {" "}
                       <MenubarItem>
                         Orders{" "}
@@ -199,7 +198,7 @@ const Navbar = () => {
                     <span> profile </span>
                   </Link>
                   <Link
-                    to={"/order"}
+                    to={"/order/status"}
                     className="flex mt-2 items-center gap-4 bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
                   >
                     <HandPlatter />
@@ -213,21 +212,21 @@ const Navbar = () => {
                     <span> cart (0) </span>
                   </Link>
                   <Link
-                    to={"/profile"}
+                    to={"/admin/menu"}
                     className="flex mt-2 items-center gap-4 bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
                   >
                     <SquareMenu />
                     <span> menu </span>
                   </Link>
                   <Link
-                    to={"/profile"}
+                    to={"/admin/restaurant"}
                     className="flex mt-2 items-center gap-4 bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
                   >
                     <UtensilsCrossed />
-                    <span> Restorent </span>
+                    <span> Restaurant </span>
                   </Link>
                   <Link
-                    to={"/profile"}
+                    to={"/admin/orders"}
                     className="flex mt-2 items-center gap-4 bg-gray-200 px-3 py-2 rounded-lg cursor-pointer hover:text-gray-900 font-medium"
                   >
                     <PackageCheck />

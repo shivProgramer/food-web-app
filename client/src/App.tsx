@@ -10,7 +10,12 @@ import HeroSection from "./components/user_def_cmp/HeroSection";
 import Profile from "./components/user_def_cmp/Profile";
 import SearchPage from "./components/user_def_cmp/SearchPage";
 import RestaurantDetails from "./components/user_def_cmp/RestaurantDetails";
-import Cart from "./components/user_def_cmp/cart";
+import Cart from "./components/user_def_cmp/Cart";
+import Restaurant from "./admin/Restaurant";
+import AddMenu from "./admin/AddMenu";
+import Orders from "./admin/Orders.tsx";
+import Success from "./components/user_def_cmp/Success.tsx";
+
 
 const appRouter = createBrowserRouter([
   {
@@ -36,6 +41,24 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/order/status",
+        element: <Success />,
+      },
+
+      // admin services start from here 
+      {
+        path: "/admin/restaurant",
+        element: <Restaurant />,
+      },
+      {
+        path: "/admin/menu",
+        element: <AddMenu />,
+      },
+      {
+        path: "/admin/orders",
+        element: <Orders />,
       },
     ],
   },
